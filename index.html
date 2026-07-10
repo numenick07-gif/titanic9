@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Titanic ML | Supervivencia con Machine Learning</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inicio">Titanic ML</a>
+      <nav aria-label="Navegacion principal">
+        <a href="#proyecto">Proyecto</a>
+        <a href="#metodologia">CRISP-ML</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#app">App</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <canvas id="ar-scene" aria-hidden="true"></canvas>
+        <div class="hero-copy">
+          <p class="eyebrow">Analisis predictivo del Titanic</p>
+          <h1>Titanic ML</h1>
+          <p>
+            Un proyecto de aprendizaje supervisado para predecir supervivencia e
+            interpretar los factores que mas influyeron durante el naufragio.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="../app/streamlit_app.py">Ver app</a>
+            <a class="button secondary" href="../notebooks/titanic_crisp_ml.ipynb">Ver notebook</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyecto" class="section split">
+        <div>
+          <p class="eyebrow">Descripcion</p>
+          <h2>Un problema historico convertido en un modelo explicable</h2>
+          <p>
+            El proyecto analiza si variables como sexo, edad, clase del boleto,
+            tarifa, puerto de embarque y tamano familiar permiten estimar la
+            probabilidad de supervivencia de un pasajero del Titanic.
+          </p>
+        </div>
+        <figure class="visual-panel">
+          <img src="assets/ar-dashboard.png" alt="Panel visual estilo realidad aumentada con metricas del Titanic" />
+        </figure>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Objetivos</p>
+        <h2>Alcance del proyecto</h2>
+        <div class="grid">
+          <article>
+            <h3>Explorar los datos</h3>
+            <p>Revisar distribuciones, valores faltantes y patrones de supervivencia.</p>
+          </article>
+          <article>
+            <h3>Preparar variables</h3>
+            <p>Limpiar datos, codificar categorias y crear `FamilySize` e `IsAlone`.</p>
+          </article>
+          <article>
+            <h3>Modelar</h3>
+            <p>Entrenar Regresion Logistica y Regresion Lineal comparativa.</p>
+          </article>
+          <article>
+            <h3>Desplegar</h3>
+            <p>Publicar una app Streamlit y documentar el flujo completo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="metodologia" class="section timeline">
+        <p class="eyebrow">Metodologia CRISP-ML</p>
+        <h2>Flujo de trabajo</h2>
+        <ol>
+          <li>Comprension del problema</li>
+          <li>Comprension y exploracion de datos</li>
+          <li>Preparacion e ingenieria de caracteristicas</li>
+          <li>Construccion de modelos</li>
+          <li>Evaluacion e interpretacion</li>
+          <li>Despliegue con Streamlit y GitHub</li>
+        </ol>
+      </section>
+
+      <section class="section split reverse">
+        <div>
+          <p class="eyebrow">Exploracion</p>
+          <h2>Variables clave del analisis</h2>
+          <p>
+            La hipotesis principal es que `Sex`, `Pclass`, `Age`, `Fare` y
+            `FamilySize` explican una parte importante de la supervivencia. El
+            notebook incluye graficos para comparar estos patrones.
+          </p>
+        </div>
+        <figure class="visual-panel">
+          <img src="assets/ar-ship.png" alt="Representacion visual del Titanic con capas de datos" />
+        </figure>
+      </section>
+
+      <section id="resultados" class="section results">
+        <p class="eyebrow">Modelos</p>
+        <h2>Resultados esperados</h2>
+        <div class="metrics">
+          <article>
+            <span>Clasificacion</span>
+            <strong>Regresion Logistica</strong>
+            <p>Accuracy, Precision, Recall, F1-score, matriz de confusion y ROC-AUC.</p>
+          </article>
+          <article>
+            <span>Regresion</span>
+            <strong>Regresion Lineal</strong>
+            <p>MAE, MSE, RMSE y R2 para predecir la tarifa del boleto.</p>
+          </article>
+          <article>
+            <span>Interpretacion</span>
+            <strong>Coeficientes</strong>
+            <p>Variables con mayor peso positivo o negativo en la supervivencia.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="app" class="section app-callout">
+        <p class="eyebrow">Aplicacion interactiva</p>
+        <h2>Predice la supervivencia de un pasajero</h2>
+        <p>
+          La app permite ingresar sexo, edad, clase, tarifa, familiares y puerto
+          de embarque para mostrar probabilidad, prediccion y factores influyentes.
+        </p>
+        <a class="button primary" href="../app/streamlit_app.py">Abrir archivo de la app</a>
+      </section>
+
+      <section class="section conclusions">
+        <p class="eyebrow">Conclusiones</p>
+        <h2>Lectura final</h2>
+        <p>
+          La Regresion Logistica es el modelo adecuado para la variable binaria
+          `Survived`. La Regresion Lineal cumple una funcion academica para
+          comparar una tarea continua con una tarea de clasificacion.
+        </p>
+        <div class="team">
+          <strong>Integrantes:</strong>
+          <span>Agregar nombres del equipo</span>
+        </div>
+        <div class="team">
+          <strong>Repositorio:</strong>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">Agregar enlace de GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
